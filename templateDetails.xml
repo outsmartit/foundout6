@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="template" client="site" method="upgrade">
+    <name>foundout6</name>
+    <creationDate>January, 2015</creationDate>
+    <author>Outsmartit.be</author>
+    <authorEmail>info@outsmartit.be</authorEmail>
+    <authorUrl>http://www.outsmartit.be</authorUrl>
+    <copyright>Copyright (C) 2015 Diederik | Outsmartit.be | All rights Reserved</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0.0</version>	
+    <description>TPL_FOUNDOUT_DESCRIPTION</description>
+
+    <files>
+        <filename>index.php</filename>
+        <filename>error.php</filename>
+        <filename>framework.php</filename>
+        <filename>templateDetails.xml</filename>
+        <filename>template_preview.png</filename>
+	<filename>template_thumbnail.png</filename>
+        <filename>favicon.ico</filename>
+        <folder>css</folder>
+        <folder>html</folder>
+        <folder>helpers</folder>
+        <folder>images</folder>
+        <folder>fonts</folder>
+        <folder>language</folder>
+        <folder>js</folder>
+    </files>
+
+    <positions>
+        <position>above-nav</position>
+        <position>lang-sel</position>
+        <position>debug</position>
+        <position>breadcrumbs</position>
+        <position>nav</position>
+        <position>top</position>
+        <position>above</position>
+        <position>above-content</position>
+        <position>left</position>
+        <position>right</position>
+        <position>below-content</position>
+        <position>below</position>
+        <position>bottom</position>
+        <position>footer</position>
+    </positions>
+
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.tpl_foundout6.ini</language>
+        <language tag="en-GB">en-GB/en-GB.tpl_foundout6.sys.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.tpl_foundout6.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.tpl_foundout6.sys.ini</language>
+    </languages>
+
+    <config>
+        <fields name="params">
+            <fieldset name="TPL_FOUNDOUT_SETTINGS_GENERAL_TITLE" label="TPL_FOUNDOUT_SETTINGS_GENERAL_DESC"  >
+                <field name="logo" type="media"
+                                label="TPL_FOUNDOUT_FIELD_LOGO_LABEL" description="TPL_FOUNDOUT_FIELD_LOGO_DESC" />
+
+                <field name="sitetitle"  type="text" default=""
+                       label="TPL_FOUNDOUT_FIELD_SITETITLE_LABEL"
+                       description="TPL_FOUNDOUT_FIELD_SITETITLE_DESC"
+                       filter="string" />
+
+                <field name="sitedescription"  type="text" default=""
+                       label="TPL_FOUNDOUT_FIELD_DESCRIPTION_LABEL"
+                       description="TPL_FOUNDOUT_FIELD_DESCRIPTION_DESC"
+                       filter="string">
+                </field>
+                <field type="spacer" name="spacer" hr="true" /> 
+                <field name="disclaimer"  type="radio" class="btn-group" default="0"
+                       label="TPL_FOUNDOUT_FIELD_DISCLAIMER_LABEL"
+                       description="TPL_FOUNDOUT_FIELD_DISCLAIMER_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="disclaimerlink" type="text" default="" label="TPL_SETTINGS_DISCLAIMERLINK_LABEL" description="TPL_SETTINGS_DISCLAIMERLINK_DESC" size="85" />
+            </fieldset>
+            <fieldset name="TPL_SETTINGS_HEADER_ONE_TITLE" label="TPL_SETTINGS_HEADER_ONE_DESC" addfieldpath="/templates/foundout6/" >
+                
+                <field name="setWidth" type="text" default="1440" label="TPL_SETTINGS_SETWIDTH_LABEL" description="TPL_SETTINGS_SETWIDTH_DESC" size="15" />
+                <field name="widthUnit" type="radio" class="btn-group" default="px" label="TPL_SETTINGS_SETWIDTHUNIT_LBL" description="TPL_SETTINGS_SETWIDTHUNIT_DESC">
+                    <option value="px">px</option>
+                    <option value="rem">rem</option>
+                </field>
+                <field name="stickyTopMenu" type="radio" class="btn-group" default="0" label="TPL_SETTINGS_STICKYTOPMENU_LBL" description="TPL_SETTINGS_STICKYTOPMENU_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field type="spacer" default=" " />
+                <field name="setGeneratorTag" type="text" default="" label="TPL_SETTINGS_GENERATOR_LABEL" description="TPL_SETTINGS_GENERATOR_DESC" size="85" />
+                <field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_SETTINGS_ANALYTICS_LABEL" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" />
+                <field name="unsetBootstrap" type="radio" class="btn-group" default="0" label="TPL_SETTINGS_BOOTSTRAP_UNSET_LBL" description="TPL_SETTINGS_BOOTSTRAP_UNSET_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/foundout6/css/" filter="" exclude="foundout6\.css|app\.css|joomla\.css|templateCore\.css|index\.html" stripext="" />
+                <field name="rightwidth" type="list" class="btn-group" default="4" label="TPL_SETTINGS_RIGHTWIDTH" description="TPL_SETTINGS_ANALYTICS_DESC" size="15">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">6</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </field>
+                <field name="leftwidth" type="list" class="btn-group" default="4" label="TPL_SETTINGS_LEFTWIDTH" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" >
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">6</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                </field>
+            </fieldset>			
+            <fieldset name="SOCIAL" label="TPL_SETTINGS_SOCIAL_LABEL">
+                <field name="twitter" type="text" default="" label="TPL_SETTINGS_TWITTER_LABEL" description="TPL_SETTINGS_TWITTER_DESC" />
+                <field name="twitterLink" type="text" default="" label="TPL_SETTINGS_TWITTER_LINK_LABEL" description="TPL_SETTINGS_TWITTER_LINK_DESC" filter="raw" />
+
+                <field name="dribbble" type="text" default="" label="TPL_SETTINGS_DRIBBBLE_LABEL" description="TPL_SETTINGS_DRIBBBLE_DESC" />
+                <field name="dribbbleLink" type="text" default="" label="TPL_SETTINGS_DRIBBBLE_LINK_LABEL" description="TPL_SETTINGS_DRIBBBLE_LINK_DESC" filter="raw" />
+
+                <field name="facebook" type="text" default="" label="TPL_SETTINGS_FACEBOOK_LABEL" description="TPL_SETTINGS_FACEBOOK_DESC" />
+                <field name="facebookLink" type="text" default="" label="TPL_SETTINGS_FACEBOOK_LINK_LABEL" description="TPL_SETTINGS_FACEBOOK_LINK_DESC" filter="raw" />
+
+                <field name="googleplus" type="text" default="" label="TPL_SETTINGS_GOOGLEPLUS_LABEL" description="TPL_SETTINGS_GOOGLEPLUS_DESC" />
+                <field name="googleplusLink" type="text" default="" label="TPL_SETTINGS_GOOGLEPLUS_LINK_LABEL" description="TPL_SETTINGS_GOOGLEPLUS_LINK_DESC" filter="raw" />
+
+                <field name="linkedin" type="text" default="" label="TPL_SETTINGS_LINKEDIN_LABEL" description="TPL_SETTINGS_LINKEDIN_DESC" />
+                <field name="linkedinLink" type="text" default="" label="TPL_SETTINGS_LINKEDIN_LINK_LABEL" description="TPL_SETTINGS_LINKEDIN_LINK_DESC" filter="raw" />
+                
+                <field name="github" type="text" default="" label="TPL_SETTINGS_GITHUB_LABEL" description="TPL_SETTINGS_GITHUB_DESC" />
+                <field name="githubLink" type="text" default="" label="TPL_SETTINGS_GITHUB_LINK_LABEL" description="TPL_SETTINGS_GITHUB_LINK_DESC" filter="raw" />
+                
+                <field name="youtube" type="text" default="" label="TPL_SETTINGS_YOUTUBE_LABEL" description="TPL_SETTINGS_YOUTUBE_DESC" />
+                <field name="youtubeLink" type="text" default="" label="TPL_SETTINGS_YOUTUBE_LINK_LABEL" description="TPL_SETTINGS_YOUTUBE_LINK_DESC" filter="raw" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

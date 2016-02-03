@@ -1,0 +1,54 @@
+/* 
+    Document   : outsmartit
+    Created on : Jan 11, 2014, 9:32:24 AM
+    Author     : DBL
+    Description:
+        overriding the foundation defaults.
+*/
+.owllogo img{
+  float:left;
+  padding-right:1em;
+}
+.panel.radius.owllogo {
+    min-height: 100px;
+}
+.mysocial .large{
+    font-size: 1.8rem;
+}
+.referentie{
+    padding-bottom: 15px;
+    padding-top: 8px;
+    border-top: 2px solid darkblue;    
+}
+.referentie:hover{
+    background-color: cornflowerblue;
+}
+.centreer{
+    display: block;
+    margin: 0 auto;
+}
+
+.img-circle{
+    border-radius: 50%;
+}
+.clinks{
+    display: block;
+    float: left;
+}
+.row.bovenaan{
+    margin-top: 2em;
+}
+p.voetnoot{
+    font-size:0.7em;
+}
+
+.ruimte_onder{
+    margin-bottom: 0.5em;
+}
+
+.found6contact h3{
+    display:none;
+}
+img.foundlogo{
+    margin-top: -17px;
+}
