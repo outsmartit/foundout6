@@ -544,3 +544,4 @@
 /joomla.xml
 /*.txt
 /robots.txt.dist
+*.DS_Store
