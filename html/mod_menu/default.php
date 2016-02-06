@@ -123,13 +123,7 @@ if ($stickyTopMenu == 1) {
 
 <div class="hide-for-medium" id="found-mobile-menu">
     
-    <ul class="vertical menu"  <?php echo $class_sfx; ?>"<?php
-    $tag = '';
-    if ($params->get('tag_id') != null) {
-        $tag = $params->get('tag_id') . '';
-        echo ' id="' . $tag . '"';
-    }
-    ?> data-accordion-menu>
+    <ul class="vertical menu" data-accordion-menu>
         <?php
         foreach ($list as $i => &$item) :
             $class = 'item-' . $item->id;
@@ -182,7 +176,7 @@ if ($stickyTopMenu == 1) {
             }
             // The next item is deeper. id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1"
             if ($item->deeper) {
-                echo '<ul class="menu vertical nested">';
+                echo '</a><ul class="menu vertical nested">';
             }
             // The next item is shallower.
             elseif ($item->shallower) {
@@ -191,11 +185,7 @@ if ($stickyTopMenu == 1) {
             }
             // The next item is on the same level.
             else {
-                if ($drop) {
-                    echo '</a>';
-                } else {
                     echo '</li>';
-                }
             }
         endforeach;
         ?></ul>

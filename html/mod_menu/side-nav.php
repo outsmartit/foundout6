@@ -42,10 +42,6 @@ defined('_JEXEC') or die;
                 echo '<li><a>';
                 $drop = true;
             }
-            
-            if ($item->parent) {
-                $class .= ' parent';
-            }
 
             if (!empty($class)) {
                 $class = ' class="' . trim($class) . '"';
@@ -72,7 +68,7 @@ defined('_JEXEC') or die;
             }
             // The next item is deeper. id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1"
             if ($item->deeper) {
-                echo '<ul class="menu vertical nested">';
+                echo '</a><ul class="menu vertical nested">';
             }
             // The next item is shallower.
             elseif ($item->shallower) {
@@ -81,11 +77,7 @@ defined('_JEXEC') or die;
             }
             // The next item is on the same level.
             else {
-                if ($drop) {
-                    echo '</a>';
-                } else {
-                    echo '</li>';
-                }
+                    echo '</li>';           
             }
         endforeach;
         ?></ul>

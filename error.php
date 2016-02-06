@@ -1,11 +1,11 @@
 <?php
 defined('_JEXEC') or die;
 /* =====================================================================
-  Gumber Template: Based on Foundation framework 5, Adapted for Joomla
+  Gumber Template: Based on Foundation framework 6, Adapted for Joomla
   Author:   Diederik
   Version:  1.0
-  Created:  January 2015
-  Copyright:  Outsmartit.be - (C) 2015 - All rights reserved
+  Created:  January 2016
+  Copyright:  Outsmartit.be - (C) 2016 - All rights reserved
   Licenses: GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html
   /* ===================================================================== */
 
@@ -28,11 +28,9 @@ $customCSS = $params->get('customCSS');
         <meta name="viewport" content="width=device-width" />
     <jdoc:include type="head" />
     <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/normalize.css" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/foundation.css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/app.css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/foundout6.css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/outsmartit.css" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/owl-carousel/owl.carousel.css" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/owl-carousel/owl.theme.css" />
     <?php if ($customCSS != -1) : ?>
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/<?php echo $customCSS ?>" />
     <?php endif; ?>
@@ -43,31 +41,15 @@ $customCSS = $params->get('customCSS');
 </head>
 <body>
     <div class="row">
-        <nav class="top-bar data-topbar">
-            <ul class="title-area">
-                <li class="name">
-                   
-                        <?php if ($logo) : ?>
-                            <img src="<?php echo $this->baseurl; ?>/<?php echo htmlspecialchars($logo); ?>"  alt="<?php echo htmlspecialchars($params->get('sitetitle')); ?>" />
-                        <?php else : ?>
-                            <?php echo htmlspecialchars($params->get('sitetitle')); ?>
-                        <?php endif; ?>
-                    
-                </li>
-                <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
-	        </ul>
-	      <section class="top-bar-section">
-	        <ul class="right">           
                     <?php $module = & JModuleHelper::getModule('menu'); ?>
                     <?php echo JModuleHelper::renderModule($module); ?>
-                </ul>
-        </nav>
     </div> 
 
-    <div class="row">
-        <div class="large-6 columns">
+    <div class="row" style="margin-top:5rem;">
+        <hr/>
+        <div class="medium-6 columns">
             <img src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/images/uil-oops.jpg"/></div>
-        <div class="large-6 columns">
+        <div class="medium-6 columns">
             <?php echo "<h2>Ooops,</h2> something went wrong.<br />  Please use the menu for correct navigation."; ?>
         </div>
     </div>
@@ -75,7 +57,7 @@ $customCSS = $params->get('customCSS');
     <div class="footer-row">
         <div class="wrapper">
             <footer class="row">
-                <div class="moduletable large-12 columns text-right">
+                <div class="moduletable medium-12 columns text-right">
                     <?php $module1 = JModuleHelper::getModule('custom', 'footer'); ?>
                     <?php echo JModuleHelper::renderModule($module1); ?>
                 </div>
@@ -85,7 +67,10 @@ $customCSS = $params->get('customCSS');
     <div class="row text-center">
         <small>&copy; <?php echo date("Y"); ?> <?php echo htmlspecialchars($params->get('sitetitle')); ?></small>
     </div>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/vendor/jquery-2.10.0.min.js"></script>
-
+    <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.min.js" />
+    <script>
+                jQuery(document).foundation();
+            </script>
 </body>
 </html>

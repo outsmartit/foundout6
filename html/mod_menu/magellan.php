@@ -163,11 +163,7 @@ $stickyTopMenu = $app->getTemplate($myparams = true)->params->get('stickyTopMenu
                 }
                 // The next item is on the same level.
                 else {
-                  //  if ($drop) {
-                  //      echo '</a>';
-                  //  } else {
                         echo '</li>';
-                  //  }
                 }
             endforeach;
             ?></ul>
