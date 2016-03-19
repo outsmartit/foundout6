@@ -28,12 +28,12 @@ $customCSS = $params->get('customCSS');
         <meta name="viewport" content="width=device-width" />
     <jdoc:include type="head" />
     <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/app.css" />
-    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/foundout6.css" />
+    <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/app.min.css" />
     <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/outsmartit.css" />
     <?php if ($customCSS != -1) : ?>
         <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/<?php echo $customCSS ?>" />
     <?php endif; ?>
+
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -68,9 +68,9 @@ $customCSS = $params->get('customCSS');
         <small>&copy; <?php echo date("Y"); ?> <?php echo htmlspecialchars($params->get('sitetitle')); ?></small>
     </div>
     <script src="http://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.min.js" />
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/foundation.min.js"></script>
     <script>
                 jQuery(document).foundation();
-            </script>
+    </script>
 </body>
 </html>

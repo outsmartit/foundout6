@@ -52,3 +52,45 @@ p.voetnoot{
 img.foundlogo{
     margin-top: -17px;
 }
+.top-bar, .top-bar ul{
+    background-color: transparent;
+}
+.top-bar-section ul li{
+    background: none repeat scroll 0 0 #ffffff;
+}
+.top-bar-section li:not(.has-form) a.blue{
+    /*   background: none repeat scroll 0 0 #333333;*/
+    background: #090C5E;
+    line-height: 45px;
+    padding: 0 15px;
+    color: white;
+}
+.top-bar .toggle-topbar.menu-icon a{
+    color:cornflowerblue;
+}
+.top-bar .toggle-topbar.menu-icon a span::after {
+    box-shadow: 0 0 0 1px cornflowerblue, 0 7px 0 1px grey, 0 14px 0 1px cornflowerblue;
+}
+.top-bar.expanded .toggle-topbar a{
+    color: gray;
+}
+.top-bar.expanded .toggle-topbar a span::after{
+    box-shadow: 0 0 0 1px #888888, 0 7px 0 1px #888888, 0 14px 0 1px #888888;
+}
+.button.mysuccess{
+    background-color: CornflowerBlue;
+}
+.button.mysuccess:hover, .button.mysuccess:focus{
+    background-color: Crimson ;
+}
+h1, h2, h3, h4, h5, h6 {
+    color:darkblue;}
+.top-bar-section .dropdown li.title h5 a{
+    color: black;
+}
+.top-bar.expanded .title-area {
+    background-color: white;
+}
+.top-bar-section ul{
+    background-color: #fff;
+}

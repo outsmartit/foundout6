@@ -26,19 +26,14 @@ $widthUnit = $this->params->get('widthUnit');
 $topbarTitle = $this->params->get('topbarTitle');
 $stickyTopMenu = $this->params->get('stickyTopMenu');
 $googleWebFonts = $this->params->get('googleWebFonts');
-$twitter = $this->params->get('twitter');
 $twitterLink = $this->params->get('twitterLink');
-$dribbble = $this->params->get('dribbble');
+$instagramLink = $this->params->get('instagramLink');
+$pinterestLink = $this->params->get('pinterestLink');
 $dribbbleLink = $this->params->get('dribbbleLink');
-$facebook = $this->params->get('facebook');
 $facebookLink = $this->params->get('facebookLink');
-$googleplus = $this->params->get('googleplus');
 $googleplusLink = $this->params->get('googleplusLink');
-$github = $this->params->get('github');
 $githubLink = $this->params->get('githubLink');
-$linkedin = $this->params->get('linkedin');
 $linkedinLink = $this->params->get('linkedinLink');
-$youtube = $this->params->get('youtube');
 $youtubeLink = $this->params->get('youtubeLink');
 $logo = $this->params->get('logo');
 $sitetitle = $this->params->get('sitetitle');
@@ -52,7 +47,8 @@ if ($stickyTopMenu == 1) {
     $fixed = "data-sticky-container";
 }
 // Do we have social links?
-$social = ($twitterLink ? 1 : 0) + ($dribbbleLink ? 1 : 0) + ($facebookLink ? 1 : 0) + ($googleplusLink ? 1 : 0) + ($githubLink ? 1 : 0);
+$social = ($twitterLink ? 1 : 0) + ($dribbbleLink ? 1 : 0) + ($facebookLink ? 1 : 0) + ($googleplusLink ? 1 : 0) + ($githubLink ? 1 : 0)
+        + ($youtubeLink ? 1 : 0) + ($instagramLink ? 1 : 0) + ($pinterestLink ? 1 : 0);
 
 if ($this->countModules('right') == 0) {
     $rightwidth = 0;
@@ -101,16 +97,5 @@ $template = 'templates/' . $this->template;
 // Change generator tag
 $this->setGenerator($setGeneratorTag);
 
-/* Remove MooTools if set to no.
-if (!$loadMoo) {
-    unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools-core.js']);
-    unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools-more.js']);
-    unset($doc->_scripts[$this->baseurl . '/media/system/js/core.js']);
-    unset($doc->_scripts[$this->baseurl . '/media/system/js/caption.js']);
-    unset($doc->_scripts[$this->baseurl . '/media/system/js/modal.js']);
-    unset($doc->_scripts[$this->baseurl . '/media/system/js/mootools.js']);
-    unset($doc->_scripts[$this->baseurl . '/plugins/system/mtupgrade/mootools.js']);
-}
-*/
 #-------------End Construct Code--------------------------------------#
 

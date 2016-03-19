@@ -8,6 +8,7 @@
  */
 
 defined('_JEXEC') or die;
+
 ?>
 
 <?php if ($this->params->get('presentation_style') == 'sliders') : ?>
@@ -16,8 +17,7 @@ defined('_JEXEC') or die;
                     <div id="panel9d" class="accordion-content" role="tabpanel" data-tab-content aria-labelledby="panel9d-heading">
 <?php endif; ?>
 <?php if ($this->params->get('presentation_style') == 'tabs') : ?>
-    <div class="tabs-panel" id="tab9">
-	
+    <div class="tabs-panel" id="tab9">	
 <?php endif; ?>
 <?php if ($this->params->get('presentation_style') == 'plain'):?>
 	<?php echo '<h3>' . JText::_('COM_CONTACT_LINKS') . '</h3>';  ?>
