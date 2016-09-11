@@ -1,5 +1,5 @@
 # foundout6
-Joomla template based on Foundation 6.
+Joomla 3.x template based on Foundation 6.
 Font-awesome icons have been integrated
 
 Template offers different set-ups for menu :
@@ -10,5 +10,5 @@ Template offers different set-ups for menu :
 contact form sliders and tabs have been adapted to work with Foundation 6.
 
 Updates for v1.0.2 :
-- fixes in accordion menu (mobile)	
+- removed empty lines in accordion menu (submenu)	
 - error page navigation fixed.

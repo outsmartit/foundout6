@@ -47,6 +47,6 @@ if ($req)
 ?>
 <span data-tooltip aria-haspopup="true" class="has-tip"  <?php echo $title; ?> >
 <label id="<?php echo $id; ?>" for="<?php echo $for; ?>" class="<?php echo implode(' ', $classes); ?>">
-	<?php echo $text; ?> <?php if ($req) : ?><i class="fa fa-asterisk"></i><?php endif; ?>
+	<?php echo $text; ?> <?php if ($req) : ?><sup><i class="fa fa-asterisk"></i></sup><?php endif; ?>
 </label>
 </span>
