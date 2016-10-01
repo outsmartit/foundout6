@@ -2,22 +2,26 @@
     JOOMLA MODULES
    ========================================================================== */
 .module {
-  /* Remove default bullets on lists inside modules  */
+  /* Remove default bullets on lists inside modules */
 }
 .module ul, ul.category-module{
   list-style-type: none;
   margin-left: 0px;
 }
+
 ul.latestnews, .tagspopular ul {
   list-style: none;
 }
+
 .section-container > section .content {
   overflow: hidden;
 }
+
 .section-container > section .content > .button:last-child {
   padding-bottom: 0.75em !important;
   float: right;
 }
+
 /* ==========================================================================
     JOOMLA CONTENT
    ========================================================================== */
@@ -283,4 +287,7 @@ section.myrow{
 .dropdown ul{
     list-style-type: none;
     color: grey;
+}
+#example-dropdown ul{
+    list-style-type: none;
 }
