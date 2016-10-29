@@ -19,9 +19,7 @@ defined('_JEXEC') or die;
 		($this->contact->address || $this->contact->suburb  || $this->contact->state || $this->contact->country || $this->contact->postcode)) : ?>
 		<?php if ($this->params->get('address_check') > 0) : ?>
 			<dt>
-				<span class="<?php echo $this->params->get('marker_class'); ?>" >
-					<?php echo $this->params->get('marker_address'); ?>
-				</span>
+				<i class="fa fa-home"></i>
 			</dt>
 		<?php endif; ?>
 
@@ -65,9 +63,7 @@ defined('_JEXEC') or die;
 
 <?php if ($this->contact->email_to && $this->params->get('show_email')) : ?>
 	<dt>
-		<span class="<?php echo $this->params->get('marker_class'); ?>" itemprop="email">
-			<?php echo nl2br($this->params->get('marker_email')); ?>
-		</span>
+		<i class="fa fa-envelope-o"></i>
 	</dt>
 	<dd>
 		<span class="contact-emailto">
@@ -78,9 +74,7 @@ defined('_JEXEC') or die;
 
 <?php if ($this->contact->telephone && $this->params->get('show_telephone')) : ?>
 	<dt>
-		<span class="<?php echo $this->params->get('marker_class'); ?>" >
-			<?php echo $this->params->get('marker_telephone'); ?>
-		</span>
+		<i class="fa fa-phone"></i>
 	</dt>
 	<dd>
 		<span class="contact-telephone" itemprop="telephone">
@@ -90,9 +84,7 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 <?php if ($this->contact->fax && $this->params->get('show_fax')) : ?>
 	<dt>
-		<span class="<?php echo $this->params->get('marker_class'); ?>">
-			<?php echo $this->params->get('marker_fax'); ?>
-		</span>
+		<i class="fa fa-fax"></i>
 	</dt>
 	<dd>
 		<span class="contact-fax" itemprop="faxNumber">
@@ -102,9 +94,7 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 <?php if ($this->contact->mobile && $this->params->get('show_mobile')) :?>
 	<dt>
-		<span class="<?php echo $this->params->get('marker_class'); ?>" >
-			<?php echo $this->params->get('marker_mobile'); ?>
-		</span>
+		<i class="fa fa-mobile-phone"></i>
 	</dt>
 	<dd>
 		<span class="contact-mobile" itemprop="telephone">
@@ -114,8 +104,7 @@ defined('_JEXEC') or die;
 <?php endif; ?>
 <?php if ($this->contact->webpage && $this->params->get('show_webpage')) : ?>
 	<dt>
-		<span class="<?php echo $this->params->get('marker_class'); ?>" >
-		</span>
+		<i class="fa fa-globe"></i>
 	</dt>
 	<dd>
 		<span class="contact-webpage">
